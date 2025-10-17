@@ -4,7 +4,6 @@ const { generateOtp, sendOtpEmail } = require('../utils/mailer');
 
 const router = express.Router();
 
-// Send OTP
 router.post('/send', async (req, res) => {
   try {
     const { email } = req.body;
@@ -27,7 +26,6 @@ router.post('/send', async (req, res) => {
   }
 });
 
-// Verify OTP
 router.post('/verify', async (req, res) => {
   try {
     const { email, otp } = req.body;
